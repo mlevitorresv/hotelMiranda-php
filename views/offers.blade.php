@@ -12,6 +12,7 @@
     <title>Offers</title>
 </head>
 <body>
+    @section('content')
     <main class="main__offers">
         <div class="main__offers--intro">
             <p class="main__offers--intro--slogan">THE ULTIMATE LUXURY</p>
@@ -307,5 +308,6 @@
             </div>
         </div>
     </main>
+    @endsection
 </body>
 </html>

@@ -8,6 +8,7 @@
     <title>Rooms</title>
 </head>
 <body>
+    @section('content')
     <main class="main__rooms">
         <div class="main__rooms--intro">
             <p class="main__rooms--intro--slogan">THE ULTIMATE LUXURY</p>
@@ -138,10 +139,7 @@
                 </div>
             </div>
         </div>
-        
-        
     </main>
-
-
+    @endsection
     </body>
 </html>

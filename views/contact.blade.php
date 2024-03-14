@@ -8,6 +8,7 @@
     <title>Contact</title>
 </head>
 <body>
+    @section('content')
     <main class="main__contact">
         <div class="main__contact--intro">
             <p class="main__contact--intro--slogan">THE ULTIMATE LUXURY</p>
@@ -52,5 +53,6 @@
             <button class="main__contact--data--send" id="formContact">SEND</button>
         </form>
     </main>
+    @endsection
     </body>
 </html>

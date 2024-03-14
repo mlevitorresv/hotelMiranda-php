@@ -11,8 +11,7 @@
 </head>
 
 <body>
-    
-
+    @section('content')
     <main class="main">
         <div class="main__info">
             <p class="main__info--slogan">THE ULTIMATE LUXURY EXPERIENCE</p>
@@ -315,6 +314,7 @@
             </div>
         </div>
     </main>
+    @endsection
 </body>
 
 </html>

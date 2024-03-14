@@ -12,6 +12,8 @@
     <title>About</title>
 </head>
 <body>
+    
+    @section('content')
     <main class="main__us">
         <div class="main__us--intro">
             <p class="main__us--intro--slogan">THE ULTIMATE LUXURY</p>
@@ -156,5 +158,6 @@
             </div>
         </div>
     </main>
+    @endsection
 </body>
 </html>
