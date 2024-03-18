@@ -1,18 +1,4 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <link rel="stylesheet" href="./css/style.css">
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <title>About</title>
-</head>
-<body>
-    
+@extends('layouts.app') 
     @section('content')
     <main class="main__us">
         <div class="main__us--intro">
@@ -52,7 +38,7 @@
                 <p class="main__us--restaurant--text--desc">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tem por incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
                 </p>
-                <button class="main__us--restaurant--text--bt" onclick="location.href='./index.html'">TAKE A TOUR</button>
+                <button class="main__us--restaurant--text--bt" onclick="location.href='./index.php'">TAKE A TOUR</button>
             </div>
             
         </div>
@@ -159,5 +145,3 @@
         </div>
     </main>
     @endsection
-</body>
-</html>

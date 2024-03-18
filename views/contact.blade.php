@@ -1,13 +1,4 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Contact</title>
-</head>
-<body>
+@extends('layouts.app') 
     @section('content')
     <main class="main__contact">
         <div class="main__contact--intro">
@@ -54,5 +45,3 @@
         </form>
     </main>
     @endsection
-    </body>
-</html>

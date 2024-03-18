@@ -1,23 +1,11 @@
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <title>Hotel Miranda</title>
-</head>
-
-<body>
+@extends('layouts.app') 
     @section('content')
     <main class="main">
         <div class="main__info">
             <p class="main__info--slogan">THE ULTIMATE LUXURY EXPERIENCE</p>
             <h2 class="main__info--title">The Perfect Base For You</h2>
-            <button class="main__info--bt main__info--btTour" onclick="location.href='./about.html'">TAKE A TOUR</button>
-            <button class="main__info--bt main__info--btLearn" onclick="location.href='./contact.html'">LEARN MORE</button>
+            <button class="main__info--bt main__info--btTour" onclick="location.href='./about.php'">TAKE A TOUR</button>
+            <button class="main__info--bt main__info--btLearn" onclick="location.href='./contact.php'">LEARN MORE</button>
         </div>
 
         <div class="main__availability">
@@ -48,7 +36,7 @@
                     exercitation ullamco laboris nisi ut aliquip
                     ex ea commodo consequat.
                 </p>
-                <button class="main__about--underground--bt-book" onclick="location.href='./rooms.html'">BOOK NOW</button>
+                <button class="main__about--underground--bt-book" onclick="location.href='./rooms.php'">BOOK NOW</button>
             </div>
             <img src="./media/hotelUnderground.jpg" alt="Hotel terrace"
                 class="main__about--img main__about--img--terrace">
@@ -122,7 +110,7 @@
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen class="main__video--repro"></iframe>
-            <button class="main__video--bt"  onclick="location.href='./rooms.html'">BOOK NOW</button>
+            <button class="main__video--bt"  onclick="location.href='./rooms.php'">BOOK NOW</button>
         </div>
         <div class="main__facilities">
             <p class="main__facilities--info">FACILITIES</p>
@@ -315,6 +303,3 @@
         </div>
     </main>
     @endsection
-</body>
-
-</html>

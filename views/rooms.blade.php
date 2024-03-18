@@ -1,13 +1,4 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Rooms</title>
-</head>
-<body>
+@extends('layouts.app') 
     @section('content')
     <main class="main__rooms">
         <div class="main__rooms--intro">
@@ -17,7 +8,7 @@
         </div>
 
         <div class="main__rooms--elements">
-            <div class="main__rooms--elements--element" onclick="location.href='./roomDetails.html'">
+            <div class="main__rooms--elements--element" onclick="location.href='./roomDetails.php'">
                 <img src="./media/room.jpg" alt="a room of hotel" class="main__rooms--elements--element--image">
                 <div class="main__rooms--elements--element--info">
                     <div class="main__rooms--elements--element--info--icons">
@@ -37,7 +28,7 @@
                     <p class="main__rooms--elements--element--booking--book">Book now</p>
                 </div>
             </div>
-            <div class="main__rooms--elements--element" onclick="location.href='./roomDetails.html'">
+            <div class="main__rooms--elements--element" onclick="location.href='./roomDetails.php'">
                 <img src="./media/room.jpg" alt="a room of hotel" class="main__rooms--elements--element--image">
                 <div class="main__rooms--elements--element--info">
                     <div class="main__rooms--elements--element--info--icons">
@@ -57,7 +48,7 @@
                     <p class="main__rooms--elements--element--booking--book">Book now</p>
                 </div>
             </div>
-            <div class="main__rooms--elements--element" onclick="location.href='./roomDetails.html'">
+            <div class="main__rooms--elements--element" onclick="location.href='./roomDetails.php'">
                 <img src="./media/room.jpg" alt="a room of hotel" class="main__rooms--elements--element--image">
                 <div class="main__rooms--elements--element--info">
                     <div class="main__rooms--elements--element--info--icons">
@@ -77,7 +68,7 @@
                     <p class="main__rooms--elements--element--booking--book">Book now</p>
                 </div>
             </div>
-            <div class="main__rooms--elements--element" onclick="location.href='./roomDetails.html'">
+            <div class="main__rooms--elements--element" onclick="location.href='./roomDetails.php'">
                 <img src="./media/room.jpg" alt="a room of hotel" class="main__rooms--elements--element--image">
                 <div class="main__rooms--elements--element--info">
                     <div class="main__rooms--elements--element--info--icons">
@@ -97,7 +88,7 @@
                     <p class="main__rooms--elements--element--booking--book">Book now</p>
                 </div>
             </div>
-            <div class="main__rooms--elements--element" onclick="location.href='./roomDetails.html'">
+            <div class="main__rooms--elements--element" onclick="location.href='./roomDetails.php'">
                 <img src="./media/room.jpg" alt="a room of hotel" class="main__rooms--elements--element--image">
                 <div class="main__rooms--elements--element--info">
                     <div class="main__rooms--elements--element--info--icons">
@@ -118,7 +109,7 @@
                 </div>
             </div>
 
-            <div class="main__rooms--elements--element" onclick="location.href='./roomDetails.html'">
+            <div class="main__rooms--elements--element" onclick="location.href='./roomDetails.php'">
                 <img src="./media/room.jpg" alt="a room of hotel" class="main__rooms--elements--element--image">
                 <div class="main__rooms--elements--element--info">
                     <div class="main__rooms--elements--element--info--icons">
@@ -141,5 +132,3 @@
         </div>
     </main>
     @endsection
-    </body>
-</html>

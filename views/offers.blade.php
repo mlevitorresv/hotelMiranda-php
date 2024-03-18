@@ -1,17 +1,4 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <link rel="stylesheet" href="./css/style.css">
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <title>Offers</title>
-</head>
-<body>
+@extends('layouts.app')
     @section('content')
     <main class="main__offers">
         <div class="main__offers--intro">
@@ -79,7 +66,7 @@
                         </div>        
                     </div>
                                 
-                    <button class="main__offers--elements--room--data--bt" onclick="location.href='./roomDetails.html'">BOOK NOW</button>
+                    <button class="main__offers--elements--room--data--bt" onclick="location.href='./roomDetails.php'">BOOK NOW</button>
                 </div>
             </div>
         </div>
@@ -142,7 +129,7 @@
                         </div>        
                     </div>
                                 
-                    <button class="main__offers--elements--room--data--bt" onclick="location.href='./roomDetails.html'">BOOK NOW</button>
+                    <button class="main__offers--elements--room--data--bt" onclick="location.href='./roomDetails.php'">BOOK NOW</button>
                 </div>
             </div>
         </div>
@@ -205,7 +192,7 @@
                         </div>        
                     </div>
                                 
-                    <button class="main__offers--elements--room--data--bt" onclick="location.href='./roomDetails.html'">BOOK NOW</button>
+                    <button class="main__offers--elements--room--data--bt" onclick="location.href='./roomDetails.php'">BOOK NOW</button>
                 </div>
             </div>
         </div>
@@ -268,7 +255,7 @@
                         </div>        
                     </div>
                                 
-                    <button class="main__offers--elements--room--data--bt" onclick="location.href='./roomDetails.html'">BOOK NOW</button>
+                    <button class="main__offers--elements--room--data--bt" onclick="location.href='./roomDetails.php'">BOOK NOW</button>
                 </div>
             </div>
         </div>
@@ -309,5 +296,3 @@
         </div>
     </main>
     @endsection
-</body>
-</html>
