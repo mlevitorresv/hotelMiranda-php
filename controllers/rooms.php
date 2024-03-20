@@ -8,6 +8,7 @@
     
         if ($statement){
             $rooms = $statement -> fetchAll(PDO::FETCH_ASSOC);
+            return $rooms;
         }else{
             echo "No rooms founded";
             return array();
