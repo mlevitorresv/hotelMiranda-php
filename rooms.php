@@ -1,10 +1,15 @@
 <?php
-require_once './vendor/eftec/bladeone/lib/BladeOne.php';
-use eftec\bladeone\BladeOne;
+    require_once "./controllers/rooms.php";
+    require_once "./vendor/eftec/bladeone/lib/BladeOne.php";
+    use eftec\bladeone\BladeOne;
 
-$views = __DIR__ .'/views';
-$cache = __DIR__ .'/cache';
+    $rooms = getRooms();
 
-$blade = new BladeOne($views, $cache, BladeOne::MODE_AUTO);
+    $views = __DIR__ . '/views';
+    $cache = __DIR__ . '/cache';
 
-echo $blade->run("rooms");
+    $blade = new BladeOne($views, $cache, BladeOne::MODE_AUTO);
+
+    echo $blade->run("rooms", ['rooms' => $rooms]);
+    
+    
