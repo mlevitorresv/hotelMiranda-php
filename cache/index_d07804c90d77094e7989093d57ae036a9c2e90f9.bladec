@@ -9,7 +9,7 @@
  </div>
 
  <div class="main__availability">
- <form class="main__availability--form">
+ <form class="main__availability--form" action="rooms.php" method="GET">
  <div class="main__availability--form--data">
  <label for="arrivalDate" class="main__availability--form--data--text">Arrival Date</label>
  <input type="date" name="arrivalDate" id="arrivalDate"
@@ -20,7 +20,7 @@
  <input type="date" name="leDepartureDate" id="leDepartureDate"
  class="main__availability--form--data--input" />
  </div>
- <button class="main__availability--form--bt" id="availabilityForm">CHECK AVAILABILITY</button>
+ <button type="submit" class="main__availability--form--bt" id="availabilityForm">CHECK AVAILABILITY</button>
  </form>
  </div>
 

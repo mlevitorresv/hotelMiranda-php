@@ -4,14 +4,20 @@
     function getRooms() {
         global $conn;
         $query = "SELECT * FROM mirandaphp.rooms";
-        $statement = $conn -> query($query);
+        $result = $conn -> query($query);
+
+        $rooms = [];
     
-        if ($statement){
-            $rooms = $statement -> fetchAll(PDO::FETCH_ASSOC);
-            return $rooms;
+        if ($result->num_rows > 0){
+
+            while ($row = $result->fetch_assoc()) {
+                $rooms[] = $row;
+            }
         }else{
             echo "No rooms founded";
             return array();
         }
+
+        return $rooms;
     }
     

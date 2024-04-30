@@ -1,12 +1,26 @@
 <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "12345678";
+$servername = "localhost";
+$username = "root";
+$password = "12345678";
 
-    try{
-        $conn = new PDO("mysql:host=$servername; dbname=mirandaPHP", $username, $password);
+$conn = new mysqli($servername, $username, $password);
 
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    }catch(PDOException $e){
-        echo "Connection failed". $e->getMessage();
+if ($conn->connect_error) {
+    die("connection failed: " . $conn->connect_error);
+}
+
+$sql = "CREATE DATABASE IF NOT EXISTS mirandaphp";
+if ($conn->query($sql) === FALSE) {
+    echo "Error creating database: " . $conn->error;
+}
+
+$sqlFile = '../db/db.sql';
+$sqlCommands = file($sqlFile);
+
+foreach ($sqlCommands as $sqlCommand) {
+    // Ejecuta la consulta SQL
+    if ($conn->query($sqlCommand) === FALSE) {
+        echo "Error al ejecutar la consulta: $sqlCommand <br>";
+        echo "Error: " . $conn->error . "<br>";
     }
+}

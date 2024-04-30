@@ -3,6 +3,8 @@
     require_once "./vendor/eftec/bladeone/lib/BladeOne.php";
     use eftec\bladeone\BladeOne;
 
+    require './config.php';
+    
     $rooms = getRooms();
 
     $views = __DIR__ . '/views';

@@ -16,7 +16,7 @@
         $conn->exec("USE $dbname");
 
         // Ejecutar el script SQL para crear tablas u otros objetos de la base de datos
-        $sqlFile = 'db.sql';
+        $sqlFile = "db/db.sql";
         $sql = file_get_contents($sqlFile);
         $conn->exec($sql);
 
