@@ -1,16 +1,21 @@
 <?php
+require ('./vendor/autoload.php');
 
 require_once './vendor/eftec/bladeone/lib/BladeOne.php';
 use eftec\bladeone\BladeOne;
 
 $views = __DIR__ . '/views';
 $cache = __DIR__ . '/cache';
-
 $blade = new BladeOne($views, $cache, BladeOne::MODE_AUTO);
 
-$servername = "localhost";
-$username = "root";
-$password = "12345678";
+$dotenv = Dotenv\Dotenv::createImmutable('./');
+$dotenv->load();
+
+$servername = $_ENV['SERVER_NAME'];
+$username = $_ENV['USERNAME'];
+$password = $_ENV['PASSWORD'];
+$dbname = $_ENV['DB_NAME'];
+
 
 $conn = new mysqli($servername, $username, $password);
 
