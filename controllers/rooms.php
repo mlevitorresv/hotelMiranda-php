@@ -41,3 +41,17 @@
         return $rooms;
     }
     
+
+    function getRoomId($roomId){
+        global $conn;
+        $query = "SELECT * FROM mirandaphp.rooms WHERE id = $roomId";
+        $result = $conn -> query($query);
+
+        if ($result->num_rows == 0){
+            echo "No rooms with id" . $roomId;
+            return array();
+        }
+
+        return $result->fetch_assoc();
+    }
+

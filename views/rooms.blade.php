@@ -9,7 +9,7 @@
 
         <div class="main__rooms--elements">
             @foreach ($rooms as $room)
-            <div class="main__rooms--elements--element" onclick="location.href='./roomDetails.php'">
+            <div class="main__rooms--elements--element" onclick="location.href='<?php echo "roomDetails.php?room_id=" . $room['id']; ?>'">
                 <img src="{{$room['photo']}}" alt="a room of hotel" class="main__rooms--elements--element--image">
                 <div class="main__rooms--elements--element--info">
                     <div class="main__rooms--elements--element--info--icons">
