@@ -42,7 +42,7 @@
     }
     
 
-    function getRoomId($roomId){
+    function getRoomById($roomId){
         global $conn;
         $query = "SELECT * FROM mirandaphp.rooms WHERE id = $roomId";
         $result = $conn -> query($query);
