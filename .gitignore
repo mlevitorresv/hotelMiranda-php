@@ -475,3 +475,7 @@ composer.lock
 
 ##### ENV
 .env
+
+##### folders cache and compiles
+cache
+compiles
