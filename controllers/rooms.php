@@ -44,11 +44,14 @@
 
     function getRoomById($roomId){
         global $conn;
-        $query = "SELECT * FROM mirandaphp.rooms WHERE id = $roomId";
-        $result = $conn -> query($query);
+        $query = "SELECT * FROM mirandaphp.rooms WHERE id = ?";
+        $statement = $conn->prepare($query);
+        $statement->bind_param("i", $roomId);
+        $statement->execute();
+
+        $result = $statement->get_result();
 
         if ($result->num_rows == 0){
-            echo "No rooms with id" . $roomId;
             return array();
         }
 

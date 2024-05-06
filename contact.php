@@ -8,12 +8,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = $_POST['message'];
 
     $sql = "INSERT INTO mirandaphp.contacts (photo, name, email, phone, comment, date, dateTime, archived)
-            VALUES ('https://picsum.photos/seed/qqzkg4/640/480', '$fullname', '$email', '$phone', '$message', CURDATE(), DATE_FORMAT(NOW(), '%H:%i:%s'), 0)";
+            VALUES ('https://picsum.photos/seed/qqzkg4/640/480', ?, ?, ?, ?, CURDATE(), DATE_FORMAT(NOW(), '%H:%i:%s'), 0)";
 
-    if ($conn->query($sql) === FALSE) {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+    $statement = $conn->prepare($sql);
+
+    if (!$statement) {
+        die("Error al preparar la consulta: " . $conn->error);
     }
 
+    $statement->bind_param("ssss", $fullname, $email, $phone, $message);
+
+
+    if (!$statement->execute()) {
+        die("Error al ejecutar la consulta: " . $statement->error);
+    }
+
+    $statement->close();
     $conn->close();
 }
 echo $blade->run("contact");
