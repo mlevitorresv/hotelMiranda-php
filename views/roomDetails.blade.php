@@ -18,7 +18,7 @@
                 <p class="main__details--room--availability--subtitle">
                     Check availability
                 </p>
-                <form class="main__details--room--availability--form" method="POST" action="../controllers/rooms.php">
+                <form class="main__details--room--availability--form" method="POST" action="rooms.php">
                     <label for="arrivalDate" class="main__details--room--availability--form--text">Arrival Date</label>
                     <input type="date" name="arrivalDate" id="arrivalDate" class="main__details--room--availability--form--input" />
                     <label for="leDepartureDate"  class="main__details--room--availability--form--text">LeDeparture Date</label>
