@@ -26,8 +26,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $statement->close();
     $conn->close();
 
-    echo'<script type="text/javascript">
-        alert("Tarea Guardada");
+    echo '<script type="text/javascript">
+        alert("Comentario enviado");
         </script>';
 }
 echo $blade->run("contact");
