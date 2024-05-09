@@ -2,10 +2,10 @@
 require './config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $fullname = $_POST['fullname'];
-    $phone = $_POST['phone'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
+    $fullname = htmlspecialchars(trim($_POST['fullname']));
+    $phone = htmlspecialchars(trim($_POST['phone']));
+    $email = htmlspecialchars(trim($_POST['email']));
+    $message = htmlspecialchars(trim($_POST['message']));
 
     $sql = "INSERT INTO mirandaphp.contacts (photo, name, email, phone, comment, date, dateTime, archived)
             VALUES ('https://picsum.photos/seed/qqzkg4/640/480', ?, ?, ?, ?, CURDATE(), DATE_FORMAT(NOW(), '%H:%i:%s'), 0)";
@@ -25,5 +25,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $statement->close();
     $conn->close();
+
+    echo'<script type="text/javascript">
+        alert("Tarea Guardada");
+        </script>';
 }
 echo $blade->run("contact");
